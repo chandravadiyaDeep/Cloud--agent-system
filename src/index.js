@@ -39,9 +39,9 @@ async function handleMessage(message, env) {
   const text = (message.text || "").trim();
   if (!chatId || !text) return;
 
-  if (env.ALLOWED_TELEGRAM_USER_ID &&
+  if (!env.ALLOWED_TELEGRAM_USER_ID ||
       String(userId) !== String(env.ALLOWED_TELEGRAM_USER_ID)) {
-    await reply(env, chatId, "Sorry, this bot is private.");
+    await reply(env, chatId, "This bot is private or not fully configured yet.");
     return;
   }
 
