@@ -28,8 +28,8 @@ Add these under Worker → Settings → Variables and Secrets:
 - `TELEGRAM_BOT_TOKEN` — token from BotFather. If a token was exposed, revoke it with BotFather and use a replacement.
 - `TELEGRAM_WEBHOOK_SECRET` — random string of 1–256 characters, used to validate Telegram webhook requests.
 
-### Optional variable
-- `ALLOWED_TELEGRAM_USER_ID` — your numeric Telegram user ID. When set, only that Telegram user can use the bot. Find your numeric ID using a trusted Telegram ID bot; do not use your bot token with third-party sites.
+### Required variable
+- `ALLOWED_TELEGRAM_USER_ID` — your numeric Telegram user ID. The bot fails closed unless this is set, and only this Telegram user can use it. Find your numeric ID using a trusted Telegram ID bot; never give that bot your bot token.
 
 ## Deploy
 
