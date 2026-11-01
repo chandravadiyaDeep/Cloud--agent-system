@@ -1,0 +1,7 @@
+name = "my-cloud-agent"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+# Configure the D1 binding named DB in the Cloudflare dashboard.
+# Keep the database ID out of this file until you deliberately choose
+# to manage the binding through Wrangler.
